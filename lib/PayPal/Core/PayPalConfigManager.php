@@ -101,7 +101,7 @@ class PayPalConfigManager
             $arr = array();
             if ($searchKey !== '') {
                 foreach ($this->configs as $k => $v) {
-                    if (strstr($k, $searchKey)) {
+                    if (strstr($k, $searchKey ?? '')) {
                         $arr[$k] = $v;
                     }
                 }
