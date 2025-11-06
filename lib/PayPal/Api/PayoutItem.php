@@ -139,7 +139,12 @@ class PayoutItem extends PayPalResourceModel
     }
 
     /**
-     * Set the recipient wallet. Default is:<ul><code>PAYPAL</code>. PayPal.</li><li><code>VENMO</code>. Venmo.</li></ul>.
+     * Set the recipient wallet. PayPay explains that if omitted this will default to "PAYPAL".
+     *
+     * Possible values:<ul><code>PAYPAL</code>. PayPal.</li><li><code>VENMO</code>. Venmo.</li></ul>.
+     * This is not enforced by the library.
+     *
+     * See: https://developer.paypal.com/docs/api/payments.payouts-batch/v1/#definition-payout_item_detail
      *
      * @param string $recipient_wallet
      *
